@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Web Development Portfolio & Learning | Enhance HTML with Copilot</title>
+    <meta name="description" content="Explore web development projects, skills, and contact information. Learn how to enhance HTML accessibility and SEO using Copilot.">
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Enhancing HTML with Copilot: Web Development Portfolio</h1>
+    </header>
+    <nav role="navigation">
+        <button class="hamburger" aria-label="Open navigation menu" aria-controls="main-nav" aria-expanded="false">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+        <ul id="main-nav">
+            <li><a href="#about-me" tabindex="0" aria-label="Go to About Me section">About Me</a></li>
+            <li><a href="#projects" tabindex="0" aria-label="Go to Projects section">Projects</a></li>
+            <li><a href="#skills" tabindex="0" aria-label="Go to Skills section">Skills</a></li>
+            <li><a href="#contact" tabindex="0" aria-label="Go to Contact Me section">Contact Me</a></li>
+        </ul>
+    </nav>
+    <main role="main">
+        <section id="about-me">
+            <h2>About Me</h2>
+            <p>Hello! My name is Bafode Fofana. I am passionate about web development and excited to enhance my HTML skills with Copilot. I enjoy learning new technologies and building creative web solutions.</p>
+        </section>
+        <!-- use article tag to add "projects" section and  figure tag to add an image with caption -->
+        <section id="projects">
+            <h2>Projects</h2>
+            <div id="project-filters">
+                <button onclick="filterProjects('all')">All</button>
+                <button onclick="filterProjects('portfolio')">Portfolio</button>
+                <button onclick="filterProjects('blog')">Blog</button>
+                <button onclick="filterProjects('app')">App</button>
+                <button onclick="filterProjects('gallery')">Gallery</button>
+            </div>
+            <article data-category="portfolio">
+                <h3>Personal Portfolio</h3>
+                <figure>
+                    <img src="https://images.unsplash.com/photo-1461749280684-dccba630e2f6?auto=format&fit=crop&w=400&q=80" alt="Screenshot of Personal Portfolio" class="project-img">
+                    <figcaption>My personal portfolio showcasing my projects and skills.</figcaption>
+                </figure>
+                <p>This project involved creating a responsive personal portfolio website using HTML, CSS, and JavaScript. It highlights my work experience, skills, and contact information.</p>
+                <a href="#" tabindex="0" aria-label="View Personal Portfolio project details">View Details</a>
+            </article>
+            <article data-category="blog">
+                <h3>Blog Website</h3>
+                <figure>
+                    <img src="https://images.unsplash.com/photo-1515378791036-0648a3ef77b2?auto=format&fit=crop&w=400&q=80" alt="Screenshot of Blog Website" class="project-img">
+                    <figcaption>A blog website where I share articles on web development.</figcaption>
+                </figure>
+                <p>This blog website was built to share my knowledge and experiences in web development. It features a clean design, easy navigation, and a commenting system.</p>
+                <a href="#" tabindex="0" aria-label="View Blog Website project details">View Details</a>
+            </article>
+            <article data-category="app">
+                <h3>Weather App</h3>
+                <figure>
+                    <img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=400&q=80" alt="Screenshot of Weather App" class="project-img">
+                    <figcaption>A weather app providing real-time weather updates and forecasts.</figcaption>
+                </figure>
+                <p>This project is a web application that fetches and displays weather data using a public API. It features a clean UI and responsive design for mobile and desktop users.</p>
+                <a href="#" tabindex="0" aria-label="View Weather App project details">View Details</a>
+            </article>
+            <article data-category="gallery">
+                <h3>Photo Gallery</h3>
+                <figure>
+                    <img src="https://images.unsplash.com/photo-1465101046530-73398c7f28ca?auto=format&fit=crop&w=400&q=80" alt="Screenshot of Photo Gallery" class="project-img">
+                    <figcaption>A responsive photo gallery showcasing beautiful images.</figcaption>
+                </figure>
+                <p>This project is a gallery website that displays curated images in a grid layout. It supports lightbox viewing and is optimized for all devices.</p>
+                <a href="#" tabindex="0" aria-label="View Photo Gallery project details">View Details</a>
+            </article>
+            <!-- Lightbox modal for project images -->
+            <div id="lightbox-modal" class="lightbox-modal" style="display:none;">
+                <span class="lightbox-close" tabindex="0" aria-label="Close image" onclick="closeLightbox()">&times;</span>
+                <img id="lightbox-img" src="" alt="Project Image" />
+            </div>
+        </section>
+        <!--ul tag for skills section -->
+        <section id="skills">
+            <h2>Skills</h2>
+            <ul>
+                <li>HTML5</li>
+                <li>CSS3</li>
+                <li>JavaScript</li>
+                <li>Responsive Web Design</li>
+                <li>Version Control (Git)</li>
+            </ul>
+        </section>
+        <!-- create form  with form input textarea and submit button -->
+        <section id="contact">
+            <h2>Contact Me</h2>
+            <form action="#" method="post">
+                <label for="name">Name:</label><br>
+                <input type="text" id="name" name="name" required tabindex="0"><br><br>
+                <label for="email">Email:</label><br>
+                <input type="email" id="email" name="email" required tabindex="0"><br><br>
+                <label for="message">Message:</label><br>
+                <textarea id="message" name="message" rows="4" required tabindex="0"></textarea><br><br>
+                <input type="submit" value="Submit" tabindex="0" aria-label="Submit Contact Form">
+            </form>
+    </main>
+    <footer role="contentinfo">
+        <p>&copy; 2023 Microsoft. All rights reserved.</p>
+        <a href="https://www.microsoft.com" tabindex="0" aria-label="Visit Microsoft website">Microsoft Website</a>
+    </footer>
+</main>
+</main>
+<script src="script.js"></script>
+</body>
+</html>
