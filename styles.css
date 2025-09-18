@@ -169,6 +169,37 @@ nav li {
   margin-bottom: 1em;
   text-align: center;
 }
+/* lightbox styles */
+
+.lightbox-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.8);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+.lightbox-modal img {
+  max-width: 90vw;
+  max-height: 80vh;
+  border-radius: 8px;
+  object-fit: contain;
+  background: #222;
+  box-shadow: 0 4px 32px rgba(0, 0, 0, 0.4);
+}
+.lightbox-close {
+  position: relative;
+  top: 0px;
+  right: 20px;
+  font-size: 2rem;
+  color: #fff;
+  cursor: pointer;
+  z-index: 1001;
+}
 
 /* Skills Section */
 #skills ul {
